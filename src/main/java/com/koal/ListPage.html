@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Insert title here</title>
+</head>
+<body>
+
+<div style="width:100%;" >
+<form wicket:id="form">
+  
+  <h3 align="center">学生信息表</h3>
+  <table style="width: 100%; height: 96px;" border="1" bordercolor="orange">
+	<tbody>
+      <tr>
+		<th style="width: 62px;">学号</th>
+		<th style="width: 73px;">姓名</th>
+		<th style="width: 74px;">性别</th>
+		<th style="width: 70px;">年龄</th>
+	</tr>
+	
+	<tr wicket:id="students">
+		<th style="width: 62px;" wicket:id="id">id</th>
+		<th style="width: 73px;" wicket:id="name">name</th>
+		<th style="width: 74px;" wicket:id="gender">gender</th>
+		<th style="width: 70px;" wicket:id="age">age</th>
+		<th style="width: 59px;" align="center"> <a wicket:id="edit">修改</a></th>
+		<th style="width: 60px;" align="center"> <a wicket:id="delete">删除</a></th>
+	</tr>
+
+	
+	<tr>
+		<td style="width: 60px;"><input wicket:id="idAdd" type="text"></td>
+		<td style="width: 60px;"><input wicket:id="nameAdd" type="text"></td>
+		<td style="width: 60px;"><input wicket:id="genderAdd" type="text"></td>
+		<td style="width: 60px;"><input wicket:id="ageAdd" type="text"></td>
+		<!-- <td style="width: 59px;"><a wicket:id="add">添加</a></td> -->
+		<td style="width: 20px; " align="center"><input value="添加" type="submit"></td>
+	</tr>
+
+    </tbody>
+  </table>
+
+<span wicket:id="navigator">显示分页操作</span>
+<!-- <input type="submit"></input> -->
+</form>
+
+</div>
+
+<br>
+<br>
+
+<div style="width:100%">
+<form wicket:id="courseForm">
+
+<h3 align="center">课程信息表</h3>
+<table style="height: 56px; width: 100%;" border="1" bordercolor="orange">
+  <tbody>
+
+    <tr>
+      <th style="width: 165px;">课程编号</th>
+      <th style="width: 159px;">课程名称</th>
+      <th style="width: 144px;">课程属性</th>
+      <th style="width: 172px;">学分</th>
+      <th style="width: 143px;">学时</th>
+    </tr>
+
+    <tr wicket:id="courses">
+      <th style="width: 165px;" wicket:id="courseNO">CourseNo</th>
+      <th style="width: 159px;" wicket:id="courseName">courseName</th>
+      <th style="width: 144px;" wicket:id="property">property</th>
+      <th style="width: 172px;" wicket:id="credit">credit</th>
+      <th style="width: 143px;" wicket:id="period">period</th>
+      <th style="width: 59px;" align="center"> <a wicket:id="editCorse">修改</a></th>
+	  <th style="width: 60px;" align="center"> <a wicket:id="deleteCourse">删除</a></th>
+    </tr>
+    
+    <tr>
+		<td style="width: 60px;"><input wicket:id="courseIdAdd" type="text"></td>
+		<td style="width: 60px;"><input wicket:id="courseNameAdd" type="text"></td>
+		<td style="width: 60px;"><input wicket:id="coursePropertyAdd" type="text"></td>
+		<td style="width: 60px;"><input wicket:id="creditAdd" type="text"></td>
+        <td style="width: 60px;"><input wicket:id="periodAdd" type="text"></td>
+		<!-- <td style="width: 59px;"><a wicket:id="add">添加</a></td> -->
+		<td style="width: 20px; " align="center"><input value="添加" type="submit"></td>
+	</tr>
+    
+  </tbody>
+</table>
+<span wicket:id="courseNavigator" >显示分页操作</span>
+
+</form >
+</div>
+<br>
+<br>
+<div>
+<form wicket:id="scoreForm" style="width:100%">
+<h3 align="center">成绩信息</h3>
+<table width="100%" border="1"  bordercolor="orange">
+  <tbody>
+    <tr>
+      <th>序号</th>
+      <th>学号</th>
+      <th>姓名</th>
+      <th>课程编号</th>
+      <th>课程名称</th>
+      <th>成绩</th>
+    </tr>
+    <tr wicket:id="scores">
+      <th style="width: 165px;" wicket:id="scoreId">Id</th>
+      <th style="width: 159px;" wicket:id="stuId">studentId</th>
+      <th style="width: 144px;" wicket:id="stuNam">studentName</th>
+      <th style="width: 172px;" wicket:id="couNO">courseNO</th>
+      <th style="width: 143px;" wicket:id="couNam">courseName</th>
+      <th style="width: 143px;" wicket:id="couScore">score</th>
+      <th style="width: 59px;" align="center"> <a wicket:id="editScore">修改</a></th>
+	  <th style="width: 60px;" align="center"> <a wicket:id="deleteScore">删除</a></th>
+    </tr>
+    
+     <tr>
+		<td style="width: 60px;"><input wicket:id="scoreIdAdd" type="text"></td>
+		<td style="width: 60px;"><input wicket:id="stuIdAdd" type="text"></td>
+		<td style="width: 60px;"><input wicket:id="stuNamAdd" type="text"></td>
+		<td style="width: 60px;"><input wicket:id="couNOAdd" type="text"></td>
+        <td style="width: 60px;"><input wicket:id="couNamAdd" type="text"></td>
+        <td style="width: 60px;"><input wicket:id="couScoreAdd" type="text"></td>
+		<!-- <td style="width: 59px;"><a wicket:id="add">添加</a></td> -->
+		<td style="width: 20px; " align="center"><input value="添加" type="submit"></td>
+	</tr>
+  </tbody>
+</table>
+<span wicket:id="scoreNavigator">显示分页操作</span>
+</form>
+</div>
+</body>
+</html>
